@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'quv Markazi CRM</title>
+    <style>
+        /* Sahifa uchun asosiy dizayn */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        form, .students-list, .search-bar {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .students-list div {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .alert {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>O'quv Markazi CRM</h1>
+    </header>
+
+    <!-- Qidiruv -->
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Qidiruv... (Ism, Familya, Telefon)" />
+    </div>
+
+    <!-- Yangi Talaba Qo'shish -->
+    <form id="student-form">
+        <label for="student-name">Ism</label>
+        <input type="text" id="student-name" placeholder="Ismni kiriting" required />
+
+        <label for="student-surname">Familiya</label>
+        <input type="text" id="student-surname" placeholder="Familiyani kiriting" required />
+
+        <label for="student-phone">Telefon</label>
+        <input type="text" id="student-phone" placeholder="Telefon raqamini kiriting" required />
+
+        <label for="student-course">Kurs</label>
+        <select id="student-course" required>
+            <option value="Ona tili">Ona tili</option>
+            <option value="Matematika">Matematika</option>
+            <option value="Ingliz tili">Ingliz tili</option>
+        </select>
+
+        <label for="student-teacher">Ustozi</label>
+        <input type="text" id="student-teacher" placeholder="Ustoz ismini kiriting" required />
+
+        <label for="payment-amount">To'lov summasi</label>
+        <input type="number" id="payment-amount" placeholder="To'lov summasini kiriting" required />
+
+        <button type="submit">Qo'shish</button>
+    </form>
+
+    <!-- Talabalar ro'yxati -->
+    <div class="students-list" id="students-list"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
